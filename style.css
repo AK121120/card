@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: rgb(251, 255, 168);
+  font-family: 'Lato', sans-serif;
+  min-height: 100vh;
+  margin: 0;
+}
+
+
+.logo {
+  text-align: center;
+}
+
+.container {
+  margin: auto;
+  padding: 20px;
+}
+
+.btn {
+  cursor: pointer;
+  background-color: transparent;
+  border: 0;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 16px;
+  padding-top: 20px;
+}
+.btn1{
+  background-color: rgb(12, 66, 153);
+  padding-bottom: 15px;
+}
+.btn1:hover{
+  font-size: 20px;
+  letter-spacing: 00.5rem;
+  background-color: rgb(251, 255, 168);
+  color: black;
+}
+.btn-single {
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  border-radius: 10px;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn:focus,
+select:focus {
+  outline: 0;
+}
+
+.tog{
+  background-color: green;
+  margin-left: 25px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 5px;
+  border-radius: 20px;
+}
+.btn-toggleclass{
+  color: white;
+}
+.tog:hover{
+  background-color: lightgoldenrodyellow;
+  color: black;
+}
+.btn-toggleclass:hover{
+  color: rgb(12, 66, 153);
+  letter-spacing:0.2rem;
+}
+.btn-toggle {
+  display: block;
+  margin: auto;
+  color: black;
+  background-color: white;
+  margin-top: 20px;
+  padding-top: 5px;
+  margin-bottom: 20px;
+}
+
+.btn-toggle:hover {
+  color: white;
+  background-color: rgb(12, 66, 153);
+  letter-spacing: 0.5rem;
+}
+
+.text-box {
+  width: 70%;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -800px);
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  transition: all 1s ease-in-out;
+}
+
+.text-box.show {
+  transform: translate(-50%, 0);
+}
+
+.text-box select {
+  background-color: rgb(12, 66, 153);
+  border: 0;
+  color: #fff;
+  font-size: 12px;
+  height: 30px;
+  width: 100%;
+}
+
+.text-box textarea {
+  border: 1px #dadada solid;
+  border-radius: 4px;
+  font-size: 16px;
+  padding: 8px;
+  margin: 15px 0;
+  width: 100%;
+  height: 150px;
+}
+
+.text-box .btn {
+  width: 100%;
+}
+
+.text-box .close {
+  float: right;
+  text-align: right;
+  cursor: pointer;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+
+.box {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: box-shadow 0.2s ease-out;
+}
+
+.box.active {
+  box-shadow: 0 0 10px 5px rgb(12, 66, 153);
+}
+
+.box img {
+  width: 100%;
+  object-fit: cover;
+  height: 200px;
+}
+
+.box .info {
+  background-color: rgb(12, 66, 153);
+  color: #fff;
+  font-size: 18px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 10px;
+  text-align: center;
+  height: 100%;
+}
+
+.box .info:hover {
+  background-color: black;
+  letter-spacing: 0.5rem;
+}
+
+.addbox{
+    display: flex;
+    flex-direction: column;
+}
+.addbutton{
+    border-radius: 5px;
+    background-color: green;
+    color: #fff;
+    border: none;
+    font-size: large;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+.addbutton:hover{
+    border-radius: 5px;
+    background-color: lightgreen;
+    color: black;
+    border: none;
+    font-size: large;
+    letter-spacing: 0.5rem;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+.addtext{
+    text-align: center;
+    color: #333;
+    border-radius: 5px;
+    border: none;
+    font-size: larger;
+}
+.del{
+  text-align: center;
+  color: #fff;
+  background-color: red;
+  cursor: pointer;
+}
+@media (max-width: 1100px) {
+  main {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 760px) {
+  main {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+  .btn-single{
+    flex-direction: column;
+  }
+  .tog{
+    margin-right: 20px;
+    text-align: center;
+  }
+  .logoi{
+    width: 400px;
+  }
+}
